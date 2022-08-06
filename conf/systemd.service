@@ -10,7 +10,7 @@ User=recipes
 Group=www-data
 WorkingDirectory=__FINALPATH__
 EnvironmentFile=__FINALPATH__/.env
-ExecStart=__FINALPATH__/bin/gunicorn --error-logfile /tmp/gunicorn_err.log --log-level debug --capture-output --bind unix:__FINALPATH__/recipes.sock recipes.wsgi:application
+ExecStart=__FINALPATH__/venv/bin/gunicorn --error-logfile /tmp/gunicorn_err.log --log-level debug --capture-output --bind unix:__FINALPATH__/recipes.sock recipes.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
