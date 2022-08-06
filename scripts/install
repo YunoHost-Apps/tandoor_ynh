@@ -128,8 +128,8 @@ ynh_script_progression --message="Adding a configuration file..." --time --weigh
 
 ynh_add_config --template=".env.template" --destination="$final_path/.env"
 
-chmod 400 "$final_path/some_config_file"
-chown $app:$app "$final_path/some_config_file"
+chmod 400 "$final_path.env"
+chown $app:$app "$final_path/.env"
 
 #=================================================
 # SPECIFIC SETUP
