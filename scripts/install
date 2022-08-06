@@ -96,7 +96,7 @@ db_user=$db_name
 ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_psql_setup_db --db_user=$db_user --db_name=$db_name
 
-ynh_psql_connect_as $db_user $db_pwd <<< "ALTER DATABASE $db_name OWNER TO $db_user;"
+ynh_psql_connect_as $db_user $db_pwd <<< "ALTER USER $db_user WITH SUPERUSER;"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
