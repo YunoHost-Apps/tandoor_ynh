@@ -134,20 +134,23 @@ chown $app:$app "$final_path/.env"
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression --message="Setting up Tandoor dependencies..." --weight=1
+ynh_script_progression --message="Setting up Tandoor venv..." --weight=1
 
 ynh_exec_as $app python3 -m venv "$final_path/venv"
 
+ynh_script_progression --message="Installing dependencies via pip..." --weight=2
 pushd "$final_path"
 	ynh_exec_as $app "$final_path/venv/bin/pip3" install -r requirements.txt
 popd
 
+ynh_script_progression --message="Building frontend..." --weight=5
 pushd "$final_path/vue"
 	ynh_use_nodejs
 	yarn install
 	yarn build
 popd
 
+ynh_script_progression --message="Running migrations and generatic static files..." --weight=3
 pushd "$final_path"
 	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py migrate
 	ynh_psql_connect_as $db_user $db_pwd <<< "ALTER USER $app WITH NOSUPERUSER;"
@@ -289,14 +292,6 @@ ynh_script_progression --message="Starting a systemd service..." --time --weight
 
 # Start a systemd service
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
-
-#=================================================
-# SETUP FAIL2BAN
-#=================================================
-ynh_script_progression --message="Configuring Fail2Ban..." --time --weight=1
-
-# Create a dedicated Fail2Ban config
-ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
 
 #=================================================
 # SETUP SSOWAT
