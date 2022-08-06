@@ -151,6 +151,8 @@ popd
 pushd "$final_path"
 	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py migrate
 	ynh_psql_connect_as $db_user $db_pwd <<< "ALTER USER $app WITH NOSUPERUSER;"
+	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic --no-input 
+	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic_js_reverse 
 popd
 
 

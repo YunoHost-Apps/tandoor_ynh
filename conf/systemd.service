@@ -8,9 +8,9 @@ Restart=always
 RestartSec=3
 User=recipes
 Group=www-data
-WorkingDirectory=__FINAL_PATH__
-EnvironmentFile=__FINAL_PATH__/.env
-ExecStart=__FINAL_PATH__/bin/gunicorn --error-logfile /tmp/gunicorn_err.log --log-level debug --capture-output --bind unix:__FINAL_PATH__/recipes.sock recipes.wsgi:application
+WorkingDirectory=__FINALPATH__
+EnvironmentFile=__FINALPATH__/.env
+ExecStart=__FINALPATH__/bin/gunicorn --error-logfile /tmp/gunicorn_err.log --log-level debug --capture-output --bind unix:__FINALPATH__/recipes.sock recipes.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
