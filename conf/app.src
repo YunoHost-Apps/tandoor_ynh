@@ -1,5 +1,5 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.3.3.tar.gz
+SOURCE_SUM=887df9ac51162605fc43fd4437d956db4fcfeac68955ed8ecac6305aeb9ad68c
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
