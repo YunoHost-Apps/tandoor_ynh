@@ -15,20 +15,38 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Some long and extensive description of what the app is and does, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+This application is meant for people with a collection of recipes they want to share with family and friends or simply
+store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
+a public page.
 
-### Features
+### Core Features
 
-- Ut enim ad minim veniam, quis nostrud exercitation ullamco ;
-- Laboris nisi ut aliquip ex ea commodo consequat ;
-- Duis aute irure dolor in reprehenderit in voluptate ;
-- Velit esse cillum dolore eu fugiat nulla pariatur ;
-- Excepteur sint occaecat cupidatat non proident, sunt in culpa."
+- 🥗 **Manage your recipes** - Manage your ever growing recipe collection
+- 📆 **Plan** - multiple meals for each day
+- 🛒 **Shopping lists** - via the meal plan or straight from recipes
+- 📚 **Cookbooks** - collect recipes into books
+- 👪 **Share and collaborate** on recipes with friends and family
 
+### Made by and for power users
 
-**Version incluse :** 1.0~ynh1
+- 🔍 Powerful & customizable **search** with fulltext support and [TrigramSimilarity](https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/search/#trigram-similarity)
+- 🏷️ Create and search for **tags**, assign them in batch to all files matching certain filters
+- ↔️ Quickly merge and rename ingredients, tags and units 
+- 📥️ **Import recipes** from thousands of websites supporting [ld+json or microdata](https://schema.org/Recipe)
+- ➗ Support for **fractions** or decimals
+- 🎨 Customize your interface with **themes**
+- 📦 **Sync** files with Dropbox and Nextcloud
+  
+### All the must haves
 
-**Démo :** https://demo.example.com
+- 📱Optimized for use on **mobile** devices
+- 🌍 localized in many languages thanks to the awesome community
+- 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
+- ➕ Many more like recipe scaling, image compression, printing views and supermarkets
+
+**Version incluse :** 1.3.3~ynh1
+
+**Démo :** https://app.tandoor.dev/accounts/login/?demo
 
 ## Captures d'écran
 
@@ -49,12 +67,17 @@ Some long and extensive description of what the app is and does, lorem ipsum dol
     * upgrade process / specificities / things to be aware of ?
     * security considerations ?
 
+* Known limitations:
+    * Requires a full dedicated domain for now
+
+* Specific Steps
+    * The first time the app is installed, you need to setup the initial super user. If you directly login with your YunoHost user's credentials, you will not be able to create the superuser from the web interface.
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://example.com>
-* Documentation officielle utilisateur : <https://yunohost.org/apps>
-* Documentation officielle de l'admin : <https://yunohost.org/packaging_apps>
-* Dépôt de code officiel de l'app : <https://some.forge.com/example/example>
+* Site officiel de l'app : <https://tandoor.dev>
+* Documentation officielle utilisateur : <https://docs.tandoor.dev>
+* Documentation officielle de l'admin : <https://docs.tandoor.dev>
+* Dépôt de code officiel de l'app : <https://github.com/TandoorRecipes/recipes>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_tandoor>
 * Signaler un bug : <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
