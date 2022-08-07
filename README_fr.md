@@ -26,7 +26,7 @@ Some long and extensive description of what the app is and does, lorem ipsum dol
 - Excepteur sint occaecat cupidatat non proident, sunt in culpa."
 
 
-**Version incluse :** 1.0~ynh1
+**Version incluse :** 1.3.3~ynh1
 
 **Démo :** https://demo.example.com
 
