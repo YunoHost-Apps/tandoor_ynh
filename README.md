@@ -46,6 +46,7 @@ a public page.
 
 **Shipped version:** 1.3.3~ynh1
 
+
 **Demo:** https://app.tandoor.dev/accounts/login/?demo
 
 ## Screenshots
