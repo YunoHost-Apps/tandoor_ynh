@@ -96,7 +96,9 @@ db_user=$db_name
 ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 ynh_psql_setup_db --db_user=$db_user --db_name=$db_name
 
-ynh_psql_connect_as $db_user $db_pwd <<< "ALTER USER $db_user WITH SUPERUSER;"
+ynh_psql_execute_as_root --sql="GRANT ALL PRIVILEGES ON DATABASE $db_user TO $db_user;"
+ynh_psql_execute_as_root --sql="ALTER DATABASE $db_user OWNER TO $db_user;"
+ynh_psql_execute_as_root --sql="ALTER USER $db_user WITH SUPERUSER;"
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -151,7 +153,7 @@ popd
 ynh_script_progression --message="Running migrations and generatic static files..." --weight=3
 pushd "$final_path"
 	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py migrate
-	ynh_psql_connect_as $db_user $db_pwd <<< "ALTER USER $app WITH NOSUPERUSER;"
+	ynh_psql_execute_as_root --sql="ALTER USER $app WITH NOSUPERUSER;"
 	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic --no-input 
 	ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic_js_reverse 
 popd
