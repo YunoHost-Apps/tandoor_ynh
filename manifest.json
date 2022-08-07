@@ -39,8 +39,8 @@
             {
                 "name": "path",
                 "type": "path",
-                "example": "/example",
-                "default": "/example"
+                "example": "/tandoor",
+                "default": "/tandoor"
             },
             {
                 "name": "is_public",
