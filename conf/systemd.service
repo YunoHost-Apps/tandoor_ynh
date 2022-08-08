@@ -1,5 +1,5 @@
 [Unit]
-Description=gunicorn daemon for recipes
+Description=Tandoor, smart recipe mangement
 After=network.target
 
 [Service]
@@ -7,10 +7,12 @@ Type=simple
 Restart=always
 RestartSec=3
 User=__APP__
-Group=www-data
+Group=__APP__
 WorkingDirectory=__FINALPATH__
 EnvironmentFile=__FINALPATH__/.env
-ExecStart=__FINALPATH__/venv/bin/gunicorn --error-logfile /tmp/gunicorn_err.log --log-level debug --capture-output --bind 127.0.0.1:__PORT__ recipes.wsgi:application
+ExecStart=__FINALPATH__/venv/bin/gunicorn --bind 127.0.0.1:__PORT__ recipes.wsgi:application
+Restart=on-failure
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
