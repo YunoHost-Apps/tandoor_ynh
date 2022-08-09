@@ -21,7 +21,7 @@ port=$(ynh_app_setting_get --app=$app --key=port)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
-db_pwd=$(ynh_app_setting_get --app=$app --key=db_pwd)
+db_pwd=$(ynh_app_setting_get --app=$app --key=psqlpwd)
 secretkey=$(ynh_app_setting_get --app=$app --key=secretkey)
 
 #=================================================
@@ -135,11 +135,10 @@ chown $app:$app "$final_path/.env"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 
-	# load environment variables
-	export $(cat "/var/www/$app/.env" |grep "^[^#]" | xargs)
-
 	ynh_script_progression --message="Running migrations and generatic static files..." --weight=2
 	pushd "$final_path"
+		# load environment variables
+		export $(cat "/var/www/$app/.env" |grep "^[^#]" | xargs)
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py migrate
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic --no-input 
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic_js_reverse 
