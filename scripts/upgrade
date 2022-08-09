@@ -17,9 +17,12 @@ ynh_script_progression --message="Loading installation settings..." --weight=1
 app=$YNH_APP_INSTANCE_NAME
 
 domain=$(ynh_app_setting_get --app=$app --key=domain)
+port=$(ynh_app_setting_get --app=$app --key=port)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
+db_pwd=$(ynh_app_setting_get --app=$app --key=psqlpwd)
+secretkey=$(ynh_app_setting_get --app=$app --key=secretkey)
 
 #=================================================
 # CHECK VERSION
@@ -105,14 +108,6 @@ ynh_script_progression --message="Upgrading dependencies..." --weight=1
 ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
-# PHP-FPM CONFIGURATION
-#=================================================
-ynh_script_progression --message="Upgrading PHP-FPM configuration..." --weight=1
-
-# Create a dedicated PHP-FPM config
-ynh_add_fpm_config
-
-#=================================================
 # NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
@@ -130,8 +125,8 @@ ynh_add_config --template=".env.template" --destination="$final_path/.env"
 # FIXME: this should be handled by the core in the future
 # You may need to use chmod 600 instead of 400,
 # for example if the app is expected to be able to modify its own config
-chmod 400 "$final_path/some_config_file"
-chown $app:$app "$final_path/some_config_file"
+chmod 400 "$final_path/.env"
+chown $app:$app "$final_path/.env"
 
 #=================================================
 # SPECIFIC UPGRADE
@@ -140,11 +135,10 @@ chown $app:$app "$final_path/some_config_file"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 
-	# load environment variables
-	export $(cat "/var/www/$app/.env" |grep "^[^#]" | xargs)
-
 	ynh_script_progression --message="Running migrations and generatic static files..." --weight=2
 	pushd "$final_path"
+		# load environment variables
+		export $(cat "/var/www/$app/.env" |grep "^[^#]" | xargs)
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py migrate
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic --no-input 
 		ynh_exec_as $app "$final_path/venv/bin/python3" manage.py collectstatic_js_reverse 
