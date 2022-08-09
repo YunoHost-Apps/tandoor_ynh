@@ -132,6 +132,12 @@ ynh_add_config --template=".env.template" --destination="$final_path/.env"
 chmod 400 "$final_path/.env"
 chown $app:$app "$final_path/.env"
 
+version=$(ynh_app_upstream_version)
+
+ynh_add_config --template="version.py" --destination="$final_path/recipes/version.py"
+chmod 400 "$final_path/recipes/version.py"
+chown $app:$app "$final_path/recipes/version.py"
+
 #=================================================
 # SPECIFIC SETUP
 #=================================================
