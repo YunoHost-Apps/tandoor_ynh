@@ -94,6 +94,7 @@ ynh_script_progression --message="Creating a PostgreSQL database..." --weight=1
 db_name=$(ynh_sanitize_dbid --db_name=$app)
 db_user=$db_name
 ynh_app_setting_set --app=$app --key=db_name --value=$db_name
+ynh_psql_test_if_first_run
 ynh_psql_setup_db --db_user=$db_user --db_name=$db_name
 
 ynh_psql_execute_as_root --sql="GRANT ALL PRIVILEGES ON DATABASE $db_user TO $db_user;"
@@ -136,21 +137,27 @@ chown $app:$app "$final_path/.env"
 #=================================================
 ynh_script_progression --message="Setting up Tandoor venv..." --weight=1
 
-ynh_exec_as $app python3 -m venv "$final_path/venv"
+if [[ $(ynh_get_debian_release) == "bullseye" ]]; then
+	py_app_version="python3"
+else
+	myynh_install_python --python="$py_required_version"
+fi
+
+ynh_exec_as $app $py_app_version -m venv "$final_path/venv"
 
 ynh_script_progression --message="Installing dependencies via pip..." --weight=4
 pushd "$final_path"
-	ynh_exec_as $app "$final_path/venv/bin/pip3" install -r requirements.txt
+	ynh_exec_warn_less ynh_exec_as $app "$final_path/venv/bin/pip3" install -r requirements.txt
 popd
 
 ynh_script_progression --message="Building frontend..." --weight=5
 pushd "$final_path/vue"
 	ynh_use_nodejs
-	yarn install
-	yarn build
+	ynh_exec_warn_less yarn install
+	ynh_exec_warn_less yarn build
 popd
 
-ynh_script_progression --message="Running migrations and generatic static files..." --weight=2
+ynh_script_progression --message="Running migrations and generating static files..." --weight=2
 pushd "$final_path"
 	# load environment variables
 	export $(cat "/var/www/$app/.env" |grep "^[^#]" | xargs)
@@ -182,7 +189,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="Smart recuoe management" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Smart recipe management" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

@@ -16,7 +16,7 @@
         "userdoc": "https://docs.tandoor.dev",
         "code": "https://github.com/TandoorRecipes/recipes"
     },
-    "license": "free",
+    "license": "MIT",
     "maintainer": {
         "name": "Navan Chauhan",
         "email": "tandoor@navan.email"
@@ -37,7 +37,10 @@
             {
                 "name": "is_public",
                 "type": "boolean",
-                "default": true
+                "default": false,
+                "help": {
+                    "en": "Should the login be exposed to public?"
+                }
             }
         ]
     }
