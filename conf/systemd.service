@@ -4,11 +4,9 @@ After=network.target
 
 [Service]
 Type=simple
-Restart=always
-RestartSec=3
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__
+WorkingDirectory=__FINALPATH__/
 EnvironmentFile=__FINALPATH__/.env
 ExecStart=__FINALPATH__/venv/bin/gunicorn --bind 127.0.0.1:__PORT__ recipes.wsgi:application
 Restart=on-failure
