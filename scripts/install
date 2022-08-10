@@ -116,14 +116,6 @@ chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
 
 #=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --weight=1
-
-# Create a dedicated NGINX config
-ynh_add_nginx_config
-
-#=================================================
 # CREATE DATA DIRECTORY
 #=================================================
 ynh_script_progression --message="Creating a data directory..." --weight=1
@@ -136,6 +128,14 @@ mkdir -p $datadir
 chmod 750 "$datadir"
 chmod -R o-rwx "$datadir"
 chown -R $app:www-data "$datadir"
+
+#=================================================
+# NGINX CONFIGURATION
+#=================================================
+ynh_script_progression --message="Configuring NGINX web server..." --weight=1
+
+# Create a dedicated NGINX config
+ynh_add_nginx_config
 
 #=================================================
 # ADD A CONFIGURATION
