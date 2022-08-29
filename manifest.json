@@ -16,7 +16,7 @@
         "userdoc": "https://docs.tandoor.dev",
         "code": "https://github.com/TandoorRecipes/recipes"
     },
-    "license": "MIT",
+    "license": "AGPL-3.0-or-later",
     "maintainer": {
         "name": "Navan Chauhan",
         "email": "tandoor@navan.email"
