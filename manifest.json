@@ -3,8 +3,8 @@
     "id": "tandoor",
     "packaging_format": 1,
     "description": {
-        "en": "Application for managing recipes, planning meals, building shopping lists and much much more!",
-        "fr": "Application pour gérer les recettes, planifier les repas, créer des listes de courses et bien plus encore !"
+        "en": "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!",
+        "fr": "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
     },
     "version": "1.4.4~ynh1",
     "url": "https://tandoor.dev",
