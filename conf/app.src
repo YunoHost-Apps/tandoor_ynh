@@ -1,5 +1,5 @@
-SOURCE_URL=https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.3.3.tar.gz
-SOURCE_SUM=887df9ac51162605fc43fd4437d956db4fcfeac68955ed8ecac6305aeb9ad68c
+SOURCE_URL=https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.4.4.tar.gz
+SOURCE_SUM=e7d2a6435628bf17555fef497f84d5406c8fec1b3f6618a55457e70be6df7b61
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
