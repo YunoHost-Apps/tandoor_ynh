@@ -127,6 +127,11 @@ chown $app:$app "$final_path/recipes/version.py"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 
+	ynh_script_progression --message="Upgrading dependencies via pip..." --weight=4
+	pushd "$final_path"
+		ynh_exec_warn_less ynh_exec_as $app "$final_path/venv/bin/pip3" install -r requirements.txt
+	popd
+
 	ynh_script_progression --message="Running migrations and generatic static files..." --weight=2
 	pushd "$final_path"
 		# load environment variables
