@@ -6,7 +6,7 @@
         "en": "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!",
         "fr": "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
     },
-    "version": "1.4.5~ynh1",
+    "version": "1.4.5~ynh2",
     "url": "https://tandoor.dev",
     "upstream": {
         "license": "AGPL-3.0-or-later",
