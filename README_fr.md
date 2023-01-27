@@ -5,15 +5,15 @@ It shall NOT be edited by hand.
 
 # Tandoor pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/tandoor.svg)](https://dash.yunohost.org/appci/app/tandoor) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/tandoor.svg)](https://dash.yunohost.org/appci/app/tandoor) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
 [![Installer Tandoor avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Tandoor rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Tandoor rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 This application is meant for people with a collection of recipes they want to share with family and friends or simply
 store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
@@ -44,13 +44,13 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Version incluse :** 1.4.5~ynh1
+**Version incluse :** 1.4.5~ynh2
 
 **Démo :** https://app.tandoor.dev/accounts/login/?demo
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Tandoor](./doc/screenshots/example.jpg)
+![Capture d’écran de Tandoor](./doc/screenshots/example.jpg)
 
 ## Avertissements / informations importantes
 
@@ -61,10 +61,10 @@ a public page.
     * The first time the app is installed, you need to setup the initial super user. If you directly login with your YunoHost user's credentials, you will not be able to create the superuser from the web interface.
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://tandoor.dev>
+* Site officiel de l’app : <https://tandoor.dev>
 * Documentation officielle utilisateur : <https://docs.tandoor.dev>
-* Documentation officielle de l'admin : <https://docs.tandoor.dev>
-* Dépôt de code officiel de l'app : <https://github.com/TandoorRecipes/recipes>
+* Documentation officielle de l’admin : <https://docs.tandoor.dev>
+* Dépôt de code officiel de l’app : <https://github.com/TandoorRecipes/recipes>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_tandoor>
 * Signaler un bug : <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
@@ -80,4 +80,4 @@ ou
 sudo yunohost app upgrade tandoor -u https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
