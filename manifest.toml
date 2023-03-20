@@ -62,10 +62,9 @@ ram.runtime = "50M"
     [resources.apt]
     packages = "git curl python3 python3-pip python3-venv libpq-dev postgresql libsasl2-dev python3-dev libldap2-dev libssl-dev libffi-dev autoconf build-essential"
 
-        [[resources.apt.extras]]
-        repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-        key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-        packages = "yarn"
+    extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
+    extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
+    extras.yarn.packages = "yarn"
         
     [resources.database]
     type = "postgresql"
