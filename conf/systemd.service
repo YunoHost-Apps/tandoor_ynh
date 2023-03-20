@@ -1,5 +1,5 @@
 [Unit]
-Description=Tandoor, smart recipe mangement
+Description=Tandoor: smart recipe mangement
 After=network.target
 
 [Service]

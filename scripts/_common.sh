@@ -4,9 +4,6 @@
 # COMMON VARIABLES
 #=================================================
 
-# dependencies used by the app (must be on a single line)
-#REMOVEME? pkg_dependencies="git curl python3 python3-pip python3-venv libpq-dev postgresql libsasl2-dev python3-dev libldap2-dev libssl-dev libffi-dev autoconf build-essential"
-
 nodejs_version=16
 py_required_version=3.9.2
 
@@ -96,7 +93,6 @@ myynh_install_python () {
 	# Save python version in settings 
 	ynh_app_setting_set --app=$app --key=python --value="$python"
 }
-
 
 #=================================================
 # EXPERIMENTAL HELPERS
