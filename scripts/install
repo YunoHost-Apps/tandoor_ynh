@@ -48,7 +48,6 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
@@ -60,13 +59,22 @@ ynh_script_progression --message="Configuring NGINX web server..." --weight=1
 # Create a dedicated NGINX config
 ynh_add_nginx_config
 
+ynh_add_systemd_config
+
+# Use logrotate to manage application logfile(s)
+ynh_use_logrotate
+
+yunohost service add $app --description="Smart recipe management" --log="/var/log/$app/$app.log"
+
+# Start a systemd service
+ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
 ynh_add_config --template=".env.template" --destination="$install_dir/.env"
-
 chmod 400 "$install_dir/.env"
 chown $app:$app "$install_dir/.env"
 
@@ -110,38 +118,6 @@ pushd "$install_dir"
 	ynh_exec_as $app "$install_dir/venv/bin/python3" manage.py collectstatic --no-input 
 	ynh_exec_as $app "$install_dir/venv/bin/python3" manage.py collectstatic_js_reverse 
 popd
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression --message="Configuring a systemd service..." --weight=1
-
-ynh_add_systemd_config
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Configuring log rotation..." --weight=1
-
-# Use logrotate to manage application logfile(s)
-ynh_use_logrotate
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
-
-yunohost service add $app --description="Smart recipe management" --log="/var/log/$app/$app.log"
-
-#=================================================
-# START SYSTEMD SERVICE
-#=================================================
-ynh_script_progression --message="Starting a systemd service..." --weight=1
-
-# Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # END OF SCRIPT

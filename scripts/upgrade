@@ -39,9 +39,8 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir" --keep="venv mediafiles"
+	ynh_setup_source --dest_dir="$install_dir" --keep=".env venv mediafiles"
 
-	chmod 750 "$install_dir"
 	chmod -R o-rwx "$install_dir"
 	chown -R $app:www-data "$install_dir"
 fi
@@ -62,18 +61,26 @@ ynh_script_progression --message="Upgrading NGINX web server configuration..." -
 # Create a dedicated NGINX config
 ynh_add_nginx_config
 
+# Create a dedicated systemd config
+ynh_add_systemd_config
+
+# Use logrotate to manage app-specific logfile(s)
+ynh_use_logrotate --non-append
+
+yunohost service add $app --description="Smart recipe management" --log="/var/log/$app/$app.log"
+
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
 ynh_script_progression --message="Updating a configuration file..." --weight=1
 
-ynh_add_config --template=".env.template" --destination="$install_dir/.env"
+#ynh_add_config --template=".env.template" --destination="$install_dir/.env"
 
 # FIXME: this should be handled by the core in the future
 # You may need to use chmod 600 instead of 400,
 # for example if the app is expected to be able to modify its own config
-chmod 400 "$install_dir/.env"
-chown $app:$app "$install_dir/.env"
+#chmod 400 "$install_dir/.env"
+#chown $app:$app "$install_dir/.env"
 
 version=$(ynh_app_upstream_version)
 
@@ -88,7 +95,7 @@ chown $app:$app "$install_dir/recipes/version.py"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 
-#REMOVEME? 	ynh_script_progression --message="Upgrading dependencies via pip..." --weight=4
+	ynh_script_progression --message="Upgrading dependencies via pip..." --weight=4
 	pushd "$install_dir"
 		ynh_exec_warn_less ynh_exec_as $app "$install_dir/venv/bin/pip3" install -r requirements.txt
 	popd
@@ -109,31 +116,6 @@ then
 		yarn build
 	popd
 fi
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression --message="Upgrading systemd configuration..." --weight=1
-
-# Create a dedicated systemd config
-ynh_add_systemd_config
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Upgrading logrotate configuration..." --weight=1
-
-# Use logrotate to manage app-specific logfile(s)
-ynh_use_logrotate --non-append
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
-
-yunohost service add $app --description="Smart recipe management" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

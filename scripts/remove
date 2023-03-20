@@ -22,47 +22,14 @@ then
 	yunohost service remove $app
 fi
 
-#=================================================
-# STOP AND REMOVE SERVICE
-#=================================================
-ynh_script_progression --message="Stopping and removing the systemd service..." --weight=1
-
 # Remove the dedicated systemd config
 ynh_remove_systemd_config
-
-#=================================================
-# REMOVE LOGROTATE CONFIGURATION
-#=================================================
-ynh_script_progression --message="Removing logrotate configuration..." --weight=1
 
 # Remove the app-specific logrotate config
 ynh_remove_logrotate
 
-#=================================================
-# REMOVE DATA DIR
-#=================================================
-
-# Remove the data directory if --purge option is used
-if [ "${YNH_APP_PURGE:-0}" -eq 1 ]
-then
-	ynh_script_progression --message="Removing app data directory..." --weight=1
-#REMOVEME? 	ynh_secure_remove --file="$data_dir"
-fi
-
-#=================================================
-# REMOVE NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Removing NGINX web server configuration..." --weight=1
-
 # Remove the dedicated NGINX config
 ynh_remove_nginx_config
-
-#=================================================
-# SPECIFIC REMOVE
-#=================================================
-# REMOVE VARIOUS FILES
-#=================================================
-ynh_script_progression --message="Removing various files..." --weight=1
 
 # Remove the log files
 ynh_secure_remove --file="/var/log/$app"
