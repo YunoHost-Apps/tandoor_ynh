@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app (must be on a single line)
-pkg_dependencies="git curl python3 python3-pip python3-venv libpq-dev postgresql libsasl2-dev python3-dev libldap2-dev libssl-dev libffi-dev autoconf build-essential"
+#REMOVEME? pkg_dependencies="git curl python3 python3-pip python3-venv libpq-dev postgresql libsasl2-dev python3-dev libldap2-dev libssl-dev libffi-dev autoconf build-essential"
 
 nodejs_version=16
 py_required_version=3.9.2
@@ -57,8 +57,8 @@ myynh_install_python () {
 		else
 			ynh_print_info --message="Installing additional dependencies to build python..."
 			
-			pkg_dependencies="${pkg_dependencies} tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libbz2-dev libexpat1-dev liblzma-dev wget tar"
-			ynh_install_app_dependencies "${pkg_dependencies}"
+#REMOVEME? 			pkg_dependencies="${pkg_dependencies} tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libbz2-dev libexpat1-dev liblzma-dev wget tar"
+#REMOVEME? 			ynh_install_app_dependencies "${pkg_dependencies}"
 			
 			# APT < Minimal & Actual < Minimal => Build & install Python into /usr/local/bin
 			ynh_print_info --message="Building python (may take a while)..."
