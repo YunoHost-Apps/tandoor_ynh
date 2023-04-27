@@ -43,6 +43,8 @@ ram.runtime = "50M"
         url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.4.9.tar.gz"
         sha256 = "cf59a7702c1a7ecdb2f126ea82b32f191e24938c510252c0ce4225d665f8df2e"
         autoupdate.strategy = "latest_github_tag"
+        in_subdir = true
+        extract = true
 
     [resources.ports]
 
