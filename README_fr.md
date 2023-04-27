@@ -29,7 +29,7 @@ a public page.
 - Share and collaborate on recipes with friends and family
 
 
-**Version incluse :** 1.4.8~ynh1
+**Version incluse :** 1.4.9~ynh1
 
 **Démo :** https://app.tandoor.dev/accounts/login/?demo
 
