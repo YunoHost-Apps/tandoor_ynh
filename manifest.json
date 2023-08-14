@@ -22,7 +22,7 @@
         "email": "tandoor@navan.email"
     },
     "requirements": {
-        "yunohost": ">= 11.0.9"
+        "yunohost": ">= 11.2"
     },
     "multi_instance": true,
     "services": [
