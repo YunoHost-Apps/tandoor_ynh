@@ -16,18 +16,15 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Tandoor is meant for people with a collection of recipes they want to share with family and friends or simply
-store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
-a public page.
+Tandoor est destiné aux personnes possédant une collection de recettes qu'elles souhaitent partager avec leur famille et leurs amis ou simplement rangez-les de manière bien organisée. Un système d'autorisation de base existe mais cette application n'est pas destinée à être exécutée en tant que page publique.
 
-### Features
+### Caractéristiques
 
-- Manage your ever growing recipe collection
-- Plan - multiple meals for each day
-- Shopping lists - via the meal plan or straight from recipes
-- Cookbooks - collect recipes into books
-- Share and collaborate on recipes with friends and family
-
+- Gérez votre collection de recettes toujours croissante
+- Planifier - plusieurs repas pour chaque jour
+- Listes de courses - via le plan repas ou directement à partir des recettes
+- Livres de cuisine - rassemblez des recettes dans des livres
+- Partagez et collaborez sur des recettes avec vos amis et votre famille
 
 **Version incluse :** 1.4.9~ynh1
 

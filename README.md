@@ -16,9 +16,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Tandoor is meant for people with a collection of recipes they want to share with family and friends or simply
-store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
-a public page.
+Tandoor is meant for people with a collection of recipes they want to share with family and friends or simply store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as a public page.
 
 ### Features
 
