@@ -84,7 +84,7 @@ myynh_install_python () {
 			cd "$MY_DIR"
 			
 			# Clean
-			ynh_secure_remove "$tmpdir"
+			ynh_secure_remove --file="$tmpdir"
 			
 			# Set version
 			py_app_version="/usr/local/bin/python${python:0:3}"
