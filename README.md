@@ -41,7 +41,6 @@ Tandoor is meant for people with a collection of recipes they want to share with
 * Official user documentation: <https://docs.tandoor.dev>
 * Official admin documentation: <https://docs.tandoor.dev>
 * Upstream app code repository: <https://github.com/TandoorRecipes/recipes>
-* YunoHost documentation for this app: <https://yunohost.org/app_tandoor>
 * Report a bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
 ## Developer info
