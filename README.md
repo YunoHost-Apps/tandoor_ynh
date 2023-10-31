@@ -66,7 +66,7 @@ a public page.
 * Official user documentation: <https://docs.tandoor.dev>
 * Official admin documentation: <https://docs.tandoor.dev>
 * Upstream app code repository: <https://github.com/TandoorRecipes/recipes>
-* YunoHost documentation for this app: <https://yunohost.org/app_tandoor>
+* YunoHost Store: <https://apps.yunohost.org/app/tandoor>
 * Report a bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
 ## Developer info
