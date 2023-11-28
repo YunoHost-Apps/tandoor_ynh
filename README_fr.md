@@ -45,7 +45,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Version incluse :** 1.5.5~ynh1
+**Version incluse :** 1.5.8~ynh1
 
 **Démo :** https://app.tandoor.dev/accounts/login/?demo
 
@@ -66,7 +66,7 @@ a public page.
 * Documentation officielle utilisateur : <https://docs.tandoor.dev>
 * Documentation officielle de l’admin : <https://docs.tandoor.dev>
 * Dépôt de code officiel de l’app : <https://github.com/TandoorRecipes/recipes>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_tandoor>
+* YunoHost Store: <https://apps.yunohost.org/app/tandoor>
 * Signaler un bug : <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
 ## Informations pour les développeurs
