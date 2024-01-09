@@ -21,8 +21,11 @@ code = "https://github.com/TandoorRecipes/recipes"
 yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -32,8 +35,6 @@ ram.runtime = "50M"
     type = "domain"
 
     [install.init_main_permission]
-    help.en = "Should the login be exposed to public?"
-    help.fr = "La connexion doit-elle être exposée au public ?"
     type = "group"
     default = false
 
