@@ -26,6 +26,7 @@ Tandoor is meant for people with a collection of recipes they want to share with
 - Cookbooks - collect recipes into books
 - Share and collaborate on recipes with friends and family
 
+
 **Shipped version:** 1.4.9~ynh1
 
 **Demo:** https://app.tandoor.dev/accounts/login/?demo
