@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!"
 description.fr = "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
 
-version = "1.5.11~ynh1"
+version = "1.5.11~ynh2"
 
 maintainers = ["Navan Chauhan"]
 
