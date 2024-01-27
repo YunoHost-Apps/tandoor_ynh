@@ -1,7 +1,0 @@
-SOURCE_URL=https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.11.tar.gz
-SOURCE_SUM=deda304272a3a327eb24cd83dce61acfd86470a9bb885d31269ea01c6d1f9f14
-SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
-SOURCE_EXTRACT=true

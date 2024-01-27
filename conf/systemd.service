@@ -6,9 +6,9 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__FINALPATH__/
-EnvironmentFile=__FINALPATH__/.env
-ExecStart=__FINALPATH__/venv/bin/gunicorn --bind 127.0.0.1:__PORT__ recipes.wsgi:application
+WorkingDirectory=__INSTALL_DIR__/source/
+EnvironmentFile=__INSTALL_DIR__/.env
+ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --bind 127.0.0.1:__PORT__ recipes.wsgi:application
 Restart=on-failure
 RestartSec=10
 

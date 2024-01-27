@@ -1,0 +1,100 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "tandoor"
+name = "Tandoor"
+description.en = "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!"
+description.fr = "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
+
+version = "1.5.11~ynh2"
+
+maintainers = ["Navan Chauhan"]
+
+[upstream]
+license = "AGPL-3.0-or-later"
+website = "https://tandoor.dev"
+demo = "https://app.tandoor.dev/accounts/login/?demo"
+admindoc = "https://docs.tandoor.dev"
+userdoc = "https://docs.tandoor.dev"
+code = "https://github.com/TandoorRecipes/recipes"
+cpe = "cpe:2.3:a:tandoor:recipes"
+fund = "???"
+[integration]
+yunohost = ">= 11.2"
+architectures = "all"
+multi_instance = true
+ldap = false
+sso = false
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    help.en = "Should the login be exposed to public?"
+    help.fr = "La connexion doit-elle être exposée au public ?"
+    type = "group"
+    default = false
+
+[resources]
+    [resources.sources.main]
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.11.tar.gz"
+    sha256 = "deda304272a3a327eb24cd83dce61acfd86470a9bb885d31269ea01c6d1f9f14"
+    in_subdir = true
+
+    autoupdate.strategy = "latest_github_tag"
+    autoupdate.asset = "tarball"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+    main.default = 8095
+
+    [resources.apt]
+    packages = [
+        "git",
+        "curl",
+        "python3",
+        "python3-pip",
+        "python3-venv",
+        "libpq-dev",
+        "postgresql",
+        "libsasl2-dev",
+        "python3-dev",
+        "libldap2-dev",
+        "libssl-dev",
+        "libffi-dev",
+        "autoconf",
+        "build-essential",
+        # "tk-dev",
+        # "libncurses5-dev",
+        # "libncursesw5-dev",
+        # "libreadline6-dev",
+        # "libdb5.3-dev",
+        # "libgdbm-dev",
+        # "libsqlite3-dev",
+        # "libbz2-dev",
+        # "libexpat1-dev",
+        # "liblzma-dev",
+        # "wget",
+        # "tar",
+    ]
+
+    [resources.apt.extras.yarn]
+    repo = "deb https://dl.yarnpkg.com/debian/ stable main"
+    key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
+    packages = ["yarn"]
+
+    [resources.database]
+    type = "postgresql"

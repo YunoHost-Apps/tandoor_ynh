@@ -45,7 +45,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Shipped version:** 1.5.11~ynh1
+**Shipped version:** 1.5.11~ynh2
 
 **Demo:** https://app.tandoor.dev/accounts/login/?demo
 
@@ -53,13 +53,6 @@ a public page.
 
 ![Screenshot of Tandoor](./doc/screenshots/example.jpg)
 
-## Disclaimers / important information
-
-* Known limitations:
-    * Requires a full dedicated domain for now
-
-* Specific Steps
-    * The first time the app is installed, you need to setup the initial super user. If you directly login with your YunoHost user's credentials, you will not be able to create the superuser from the web interface.
 ## Documentation and resources
 
 * Official app website: <https://tandoor.dev>
