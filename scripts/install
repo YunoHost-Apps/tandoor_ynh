@@ -16,8 +16,6 @@ source /usr/share/yunohost/helpers
 secretkey=$(ynh_string_random --length=12)
 ynh_app_setting_set --app=$app --key=secretkey --value="$secretkey"
 
-timezone="$(cat /etc/timezone)"
-
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================

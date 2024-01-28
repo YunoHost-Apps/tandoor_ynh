@@ -6,6 +6,9 @@
 
 nodejs_version=16
 
+# Used in .env
+timezone="$(cat /etc/timezone)"
+
 #=================================================
 # PERSONAL HELPERS
 #=================================================
