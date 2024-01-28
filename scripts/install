@@ -55,7 +55,7 @@ chown -R "$app:www-data" "$data_dir"
 #=================================================
 ynh_script_progression --message="Adding a configuration file..." --weight=1
 
-ynh_add_config --template=".env.template" --destination="$install_dir/.env"
+ynh_add_config --template="dot_env" --destination="$install_dir/.env"
 
 chmod 400 "$install_dir/.env"
 chown "$app:$app" "$install_dir/.env"

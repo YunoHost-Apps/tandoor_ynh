@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # only set this to true when testing/debugging
 # when unset: 1 (true) - dont unset this, just for development
 DEBUG=0
