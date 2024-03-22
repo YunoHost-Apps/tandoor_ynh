@@ -44,10 +44,9 @@ a public page.
 - 🌍 localized in many languages thanks to the awesome community
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
+**Shipped version:** 1.5.15~ynh1
 
-**Shipped version:** 1.5.13~ynh1
-
-**Demo:** https://app.tandoor.dev/accounts/login/?demo
+**Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
 ## Screenshots
 
@@ -55,12 +54,12 @@ a public page.
 
 ## Documentation and resources
 
-* Official app website: <https://tandoor.dev>
-* Official user documentation: <https://docs.tandoor.dev>
-* Official admin documentation: <https://docs.tandoor.dev>
-* Upstream app code repository: <https://github.com/TandoorRecipes/recipes>
-* YunoHost Store: <https://apps.yunohost.org/app/tandoor>
-* Report a bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
+- Official app website: <https://tandoor.dev>
+- Official user documentation: <https://docs.tandoor.dev>
+- Official admin documentation: <https://docs.tandoor.dev>
+- Upstream app code repository: <https://github.com/TandoorRecipes/recipes>
+- YunoHost Store: <https://apps.yunohost.org/app/tandoor>
+- Report a bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
 ## Developer info
 
@@ -68,7 +67,7 @@ Please send your pull request to the [testing branch](https://github.com/YunoHos
 
 To try the testing branch, please proceed like that.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade tandoor -u https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
