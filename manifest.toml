@@ -19,7 +19,7 @@ admindoc = "https://docs.tandoor.dev"
 userdoc = "https://docs.tandoor.dev"
 code = "https://github.com/TandoorRecipes/recipes"
 cpe = "cpe:2.3:a:tandoor:recipes"
-fund = "???"
+
 [integration]
 yunohost = ">= 11.2"
 architectures = "all"
@@ -35,10 +35,7 @@ ram.runtime = "50M"
     type = "domain"
 
     [install.init_main_permission]
-    help.en = "Should the login be exposed to public?"
-    help.fr = "La connexion doit-elle être exposée au public ?"
     type = "group"
-    default = false
 
 [resources]
     [resources.sources.main]
