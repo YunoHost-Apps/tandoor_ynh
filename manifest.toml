@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!"
 description.fr = "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
 
-version = "1.5.13~ynh1"
+version = "1.5.17~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -19,7 +19,7 @@ admindoc = "https://docs.tandoor.dev"
 userdoc = "https://docs.tandoor.dev"
 code = "https://github.com/TandoorRecipes/recipes"
 cpe = "cpe:2.3:a:tandoor:recipes"
-fund = "???"
+
 [integration]
 yunohost = ">= 11.2"
 architectures = "all"
@@ -35,15 +35,12 @@ ram.runtime = "50M"
     type = "domain"
 
     [install.init_main_permission]
-    help.en = "Should the login be exposed to public?"
-    help.fr = "La connexion doit-elle être exposée au public ?"
     type = "group"
-    default = false
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.13.tar.gz"
-    sha256 = "ac4f4b2bab97e1c376f2723720b4068a8c415fe074f290fef7498f9ea5541cf3"
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.17.tar.gz"
+    sha256 = "d46246f07c644c995a5c51a4d3157fe437e5532a709edb74ff875cc2d0015219"
     in_subdir = true
 
     autoupdate.strategy = "latest_github_tag"
