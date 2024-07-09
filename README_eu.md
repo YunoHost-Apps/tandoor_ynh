@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Tandoor YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/tandoor.svg)](https://dash.yunohost.org/appci/app/tandoor) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
 
 [![Instalatu Tandoor YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
@@ -45,7 +45,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Paketatutako bertsioa:** 1.5.17~ynh1
+**Paketatutako bertsioa:** 1.5.18~ynh1
 
 **Demoa:** <https://app.tandoor.dev/accounts/login/?demo>
 
