@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Tandoor
 
-[![集成程度](https://dash.yunohost.org/integration/tandoor.svg)](https://dash.yunohost.org/appci/app/tandoor) ![工作状态](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
 
 [![使用 YunoHost 安装 Tandoor](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
@@ -45,7 +45,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**分发版本：** 1.5.17~ynh1
+**分发版本：** 1.5.18~ynh1
 
 **演示：** <https://app.tandoor.dev/accounts/login/?demo>
 
