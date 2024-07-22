@@ -12,9 +12,7 @@ TANDOOR_PORT=__PORT__
 ALLOWED_HOSTS=__DOMAIN__
 
 # random secret key, use for example `base64 /dev/urandom | head -c50` to generate one
-# ---------------------------- REQUIRED -------------------------
 SECRET_KEY=__SECRETKEY__
-# ---------------------------------------------------------------
 
 # your default timezone See https://timezonedb.com/time-zones for a list of timezones
 TZ=__TIMEZONE__
@@ -25,9 +23,7 @@ DB_ENGINE=django.db.backends.postgresql
 POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
 POSTGRES_USER=__DB_USER__
-# ---------------------------- REQUIRED -------------------------
 POSTGRES_PASSWORD=__DB_PWD__
-# ---------------------------------------------------------------
 POSTGRES_DB=__DB_NAME__
 
 # the default value for the user preference 'fractions' (enable/disable fraction support)
