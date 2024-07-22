@@ -47,7 +47,8 @@ ram.runtime = "1500M"
     autoupdate.asset = "tarball"
 
     [resources.system_user]
-
+    allow_email = true
+    
     [resources.install_dir]
 
     [resources.data_dir]
