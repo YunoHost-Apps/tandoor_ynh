@@ -12,12 +12,10 @@ TANDOOR_PORT=__PORT__
 ALLOWED_HOSTS=__DOMAIN__
 
 # random secret key, use for example `base64 /dev/urandom | head -c50` to generate one
-# ---------------------------- REQUIRED -------------------------
 SECRET_KEY=__SECRETKEY__
-# ---------------------------------------------------------------
 
 # your default timezone See https://timezonedb.com/time-zones for a list of timezones
-TIMEZONE=__TIMEZONE__
+TZ=__TIMEZONE__
 
 # add only a database password if you want to run with the default postgres, otherwise change settings accordingly
 DB_ENGINE=django.db.backends.postgresql
@@ -25,9 +23,7 @@ DB_ENGINE=django.db.backends.postgresql
 POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
 POSTGRES_USER=__DB_USER__
-# ---------------------------- REQUIRED -------------------------
 POSTGRES_PASSWORD=__DB_PWD__
-# ---------------------------------------------------------------
 POSTGRES_DB=__DB_NAME__
 
 # the default value for the user preference 'fractions' (enable/disable fraction support)
@@ -53,12 +49,13 @@ SHOPPING_MIN_AUTOSYNC_INTERVAL=5
 # If staticfiles are stored at a different location uncomment and change accordingly, MUST END IN /
 # this is not required if you are just using a subfolder
 # This can either be a relative path from the applications base path or the url of an external host
-#sub_path_only STATIC_URL=__INSTALL_DIR__/source/static/
+#sub_path_only
+#STATIC_URL=/static/
 
 # If mediafiles are stored at a different location uncomment and change accordingly, MUST END IN /
 # this is not required if you are just using a subfolder
 # This can either be a relative path from the applications base path or the url of an external host
-MEDIA_URL=/media/
+#MEDIA_URL=/media/
 
 # Serve mediafiles directly using gunicorn. Basically everyone recommends not doing this. Please use any of the examples
 # provided that include an additional nxginx container to handle media file serving.
@@ -85,8 +82,8 @@ GUNICORN_MEDIA=0
 # Required for email confirmation and password reset (automatically activates if host is set)
 EMAIL_HOST='127.0.0.1'
 EMAIL_PORT=25
-EMAIL_HOST_USER=
-EMAIL_HOST_PASSWORD=
+EMAIL_HOST_USER='__APP__'
+EMAIL_HOST_PASSWORD='__MAIL_PWD__'
 EMAIL_USE_TLS=0
 EMAIL_USE_SSL=0
 # email sender address (default 'webmaster@localhost')
@@ -97,7 +94,7 @@ DEFAULT_FROM_EMAIL=tandoor@__DOMAIN__
 # allow authentication via reverse proxy (e.g. authelia), leave off if you dont know what you are doing
 # see docs for more information https://vabene1111.github.io/recipes/features/authentication/
 # when unset: 0 (false)
-REVERSE_PROXY_AUTH=0
+REMOTE_USER_AUTH=0
 
 # Default settings for spaces, apply per space and can be changed in the admin view
 # SPACE_DEFAULT_MAX_RECIPES=0 # 0=unlimited recipes
