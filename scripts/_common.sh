@@ -28,7 +28,6 @@ _tandoor_build_frontend() {
         ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" yarn install
         ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" yarn build
     popd
-
 }
 
 #=================================================
