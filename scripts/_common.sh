@@ -4,7 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
-nodejs_version=16
+nodejs_version=20
 
 # Used in .env
 timezone="$(cat /etc/timezone)"
