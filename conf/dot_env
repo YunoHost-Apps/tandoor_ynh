@@ -55,7 +55,7 @@ SHOPPING_MIN_AUTOSYNC_INTERVAL=5
 # If mediafiles are stored at a different location uncomment and change accordingly, MUST END IN /
 # this is not required if you are just using a subfolder
 # This can either be a relative path from the applications base path or the url of an external host
-MEDIA_URL=/media/
+#MEDIA_URL=/media/
 
 # Serve mediafiles directly using gunicorn. Basically everyone recommends not doing this. Please use any of the examples
 # provided that include an additional nxginx container to handle media file serving.
