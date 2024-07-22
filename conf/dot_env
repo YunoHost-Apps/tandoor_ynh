@@ -81,8 +81,8 @@ GUNICORN_MEDIA=0
 # Required for email confirmation and password reset (automatically activates if host is set)
 EMAIL_HOST='127.0.0.1'
 EMAIL_PORT=25
-EMAIL_HOST_USER=
-EMAIL_HOST_PASSWORD=
+EMAIL_HOST_USER='__APP__'
+EMAIL_HOST_PASSWORD='__MAIL_PWD__'
 EMAIL_USE_TLS=0
 EMAIL_USE_SSL=0
 # email sender address (default 'webmaster@localhost')
