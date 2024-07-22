@@ -63,9 +63,11 @@ chown "$app:$app" "$install_dir/recipes/version.py"
 # SPECIFIC SETUP
 #=================================================
 ynh_script_progression --message="Building frontend..." --weight=5
+
 _tandoor_build_frontend
 
 ynh_script_progression --message="Installing Tandoor and its python dependencies..." --weight=1
+
 _tandoor_venv_install
 
 ynh_script_progression --message="Running migrations and generating static files..." --weight=2
