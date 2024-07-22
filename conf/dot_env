@@ -48,12 +48,12 @@ SCRIPT_NAME=__PATH__
 # If staticfiles are stored at a different location uncomment and change accordingly, MUST END IN /
 # this is not required if you are just using a subfolder
 # This can either be a relative path from the applications base path or the url of an external host
-#sub_path_only STATIC_URL=__INSTALL_DIR__/source/static/
+#sub_path_only STATIC_URL=/static/
 
 # If mediafiles are stored at a different location uncomment and change accordingly, MUST END IN /
 # this is not required if you are just using a subfolder
 # This can either be a relative path from the applications base path or the url of an external host
-MEDIA_URL=/media/
+#MEDIA_URL=/media/
 
 # Serve mediafiles directly using gunicorn. Basically everyone recommends not doing this. Please use any of the examples
 # provided that include an additional nxginx container to handle media file serving.
@@ -80,8 +80,8 @@ GUNICORN_MEDIA=0
 # Required for email confirmation and password reset (automatically activates if host is set)
 EMAIL_HOST='127.0.0.1'
 EMAIL_PORT=25
-EMAIL_HOST_USER=
-EMAIL_HOST_PASSWORD=
+EMAIL_HOST_USER='__APP__'
+EMAIL_HOST_PASSWORD='__MAIL_PWD__'
 EMAIL_USE_TLS=0
 EMAIL_USE_SSL=0
 # email sender address (default 'webmaster@localhost')
