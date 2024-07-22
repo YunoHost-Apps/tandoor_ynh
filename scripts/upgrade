@@ -31,7 +31,7 @@ ynh_exec_warn_less ynh_install_nodejs --nodejs_version="$nodejs_version"
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir/source" --full_replace=1 --keep="$install_dir/.env"
+ynh_setup_source --dest_dir="$install_dir" --full_replace=1 --keep="$install_dir/.env"
 
 chmod 750 "$install_dir"
 chmod -R o-rwx "$install_dir"
@@ -49,10 +49,10 @@ chown "$app:$app" "$install_dir/.env"
 
 version=$(ynh_app_upstream_version)
 
-ynh_add_config --template="version.py" --destination="$install_dir/source/recipes/version.py"
+ynh_add_config --template="version.py" --destination="$install_dir/recipes/version.py"
 
-chmod 400 "$install_dir/source/recipes/version.py"
-chown "$app:$app" "$install_dir/source/recipes/version.py"
+chmod 400 "$install_dir/recipes/version.py"
+chown "$app:$app" "$install_dir/recipes/version.py"
 
 #=================================================
 # SPECIFIC SETUP
@@ -66,7 +66,7 @@ ynh_script_progression --message="Installing Tandoor and its python dependencies
 _tandoor_venv_install
 
 ynh_script_progression --message="Running migrations and generating static files..." --weight=2
-pushd "$install_dir/source"
+pushd "$install_dir"
     (
         source "$install_dir/.env"
 
