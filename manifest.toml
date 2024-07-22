@@ -78,18 +78,6 @@ ram.runtime = "1500M"
         "libffi-dev",
         "autoconf",
         "build-essential",
-        # "tk-dev",
-        # "libncurses5-dev",
-        # "libncursesw5-dev",
-        # "libreadline6-dev",
-        # "libdb5.3-dev",
-        # "libgdbm-dev",
-        # "libsqlite3-dev",
-        # "libbz2-dev",
-        # "libexpat1-dev",
-        # "liblzma-dev",
-        # "wget",
-        # "tar",
     ]
 
     [resources.apt.extras.yarn]
