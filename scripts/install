@@ -74,10 +74,10 @@ ynh_script_progression --message="Installing Tandoor and its python dependencies
 _tandoor_venv_install
 
 ynh_script_progression --message="Running migrations and generating static files..." --weight=2
+
 pushd "$install_dir/source"
     (
         source "$install_dir/.env"
-
         ynh_exec_as "$app" "$venvpy" manage.py migrate
         ynh_psql_execute_as_root --sql="ALTER USER $app WITH NOSUPERUSER;"
         ynh_exec_as "$app" "$venvpy" manage.py collectstatic --no-input
