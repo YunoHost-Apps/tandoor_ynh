@@ -4,10 +4,10 @@ packaging_format = 2
 
 id = "tandoor"
 name = "Tandoor"
-description.en = "Application for managing and sharing recipes, planning meals, building shopping lists and much much more!"
-description.fr = "Gérez et partagez vos recettes, planifiez vos repas, créez vos listes de courses et beaucoup plus encore !"
+description.en = "Manage and share recipes, plan meals, build shopping lists"
+description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
 
-version = "1.5.18~ynh1"
+version = "1.5.18~ynh2"
 
 maintainers = ["Navan Chauhan"]
 
@@ -21,14 +21,14 @@ code = "https://github.com/TandoorRecipes/recipes"
 cpe = "cpe:2.3:a:tandoor:recipes"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.20"
 architectures = "all"
 multi_instance = true
 ldap = false
 sso = false
-disk = "50M"
-ram.build = "50M"
-ram.runtime = "50M"
+disk = "1000M"
+ram.build = "2000M"
+ram.runtime = "1500M"
 
 [install]
     [install.domain]

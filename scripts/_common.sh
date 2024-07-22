@@ -6,8 +6,8 @@
 
 nodejs_version=16
 
-# Used in .env
 timezone="$(cat /etc/timezone)"
+version=$(ynh_app_upstream_version)
 
 #=================================================
 # PERSONAL HELPERS

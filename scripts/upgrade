@@ -47,9 +47,8 @@ ynh_add_config --template="dot_env" --destination="$install_dir/.env"
 chmod 400 "$install_dir/.env"
 chown "$app:$app" "$install_dir/.env"
 
-version=$(ynh_app_upstream_version)
-
 ynh_add_config --template="version.py" --destination="$install_dir/source/recipes/version.py"
+
 chmod 400 "$install_dir/source/recipes/version.py"
 chown "$app:$app" "$install_dir/source/recipes/version.py"
 
@@ -57,9 +56,11 @@ chown "$app:$app" "$install_dir/source/recipes/version.py"
 # SPECIFIC SETUP
 #=================================================
 ynh_script_progression --message="Building frontend..." --weight=5
+
 _tandoor_build_frontend
 
 ynh_script_progression --message="Installing Tandoor and its python dependencies..." --weight=1
+
 _tandoor_venv_install
 
 ynh_script_progression --message="Running migrations and generating static files..." --weight=2
