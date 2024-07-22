@@ -34,6 +34,11 @@ ram.runtime = "1500M"
     [install.domain]
     type = "domain"
 
+    [install.path]
+    # this is a generic question - ask strings are automatically handled by YunoHost's core
+    type = "path"
+    default = "/recipies"
+
     [install.init_main_permission]
     type = "group"
 
