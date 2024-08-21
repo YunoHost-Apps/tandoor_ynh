@@ -51,6 +51,9 @@ ram.runtime = "1500M"
     
     [resources.install_dir]
 
+    [resources.data_dir]
+    subdirs = ["media"]
+
     [resources.permissions]
     main.url = "/"
     api.url = "/api"
