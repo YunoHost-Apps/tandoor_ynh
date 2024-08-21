@@ -45,7 +45,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Versi terkirim:** 1.5.18~ynh2
+**Versi terkirim:** 1.5.19~ynh1
 
 **Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
@@ -58,7 +58,7 @@ a public page.
 - Website aplikasi resmi: <https://tandoor.dev>
 - Dokumentasi pengguna resmi: <https://docs.tandoor.dev>
 - Dokumentasi admin resmi: <https://docs.tandoor.dev>
-- Repositori kode aplikasi hulu: <https://github.com/TandoorRecipes/recipes>
+- Depot kode aplikasi hulu: <https://github.com/TandoorRecipes/recipes>
 - Gudang YunoHost: <https://apps.yunohost.org/app/tandoor>
 - Laporkan bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
