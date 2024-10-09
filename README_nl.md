@@ -1,20 +1,20 @@
 <!--
-注意：此 README 由 <https://github.com/YunoHost/apps/tree/master/tools/readme_generator> 自动生成
-请勿手动编辑。
+NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Hij mag NIET handmatig aangepast worden.
 -->
 
-# YunoHost 上的 Tandoor
+# Tandoor voor Yunohost
 
-[![集成程度](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![Integratieniveau](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
 
-[![使用 YunoHost 安装 Tandoor](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
+[![Tandoor met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
-*[阅读此 README 的其它语言版本。](./ALL_README.md)*
+*[Deze README in een andere taal lezen.](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Tandoor。*  
-> *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
+> *Met dit pakket kun je Tandoor snel en eenvoudig op een YunoHost-server installeren.*  
+> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
 
-## 概况
+## Overzicht
 
 This application is meant for people with a collection of recipes they want to share with family and friends or simply
 store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
@@ -45,33 +45,33 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**分发版本：** 1.5.20~ynh1
+**Geleverde versie:** 1.5.20~ynh1
 
-**演示：** <https://app.tandoor.dev/accounts/login/?demo>
+**Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
-## 截图
+## Schermafdrukken
 
-![Tandoor 的截图](./doc/screenshots/example.jpg)
+![Schermafdrukken van Tandoor](./doc/screenshots/example.jpg)
 
-## 文档与资源
+## Documentatie en bronnen
 
-- 官方应用网站： <https://tandoor.dev>
-- 官方用户文档： <https://docs.tandoor.dev>
-- 官方管理文档： <https://docs.tandoor.dev>
-- 上游应用代码库： <https://github.com/TandoorRecipes/recipes>
-- YunoHost 商店： <https://apps.yunohost.org/app/tandoor>
-- 报告 bug： <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
+- Officiele website van de app: <https://tandoor.dev>
+- Officiele gebruikersdocumentatie: <https://docs.tandoor.dev>
+- Officiele beheerdersdocumentatie: <https://docs.tandoor.dev>
+- Upstream app codedepot: <https://github.com/TandoorRecipes/recipes>
+- YunoHost-store: <https://apps.yunohost.org/app/tandoor>
+- Meld een bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
-## 开发者信息
+## Ontwikkelaarsinformatie
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing) 发送拉取请求。
+Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
 
-如要尝试 `testing` 分支，请这样操作：
+Om de `testing`-branch uit te proberen, ga als volgt te werk:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
-或
+of
 sudo yunohost app upgrade tandoor -u https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
 ```
 
-**有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>
+**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>
