@@ -1,20 +1,20 @@
 <!--
-N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-Ini TIDAK boleh diedit dengan tangan.
+NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Hij mag NIET handmatig aangepast worden.
 -->
 
-# Tandoor untuk YunoHost
+# Tandoor voor Yunohost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![Integratieniveau](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
 
-[![Pasang Tandoor dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
+[![Tandoor met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
-*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
+*[Deze README in een andere taal lezen.](./ALL_README.md)*
 
-> *Paket ini memperbolehkan Anda untuk memasang Tandoor secara cepat dan mudah pada server YunoHost.*  
-> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
+> *Met dit pakket kun je Tandoor snel en eenvoudig op een YunoHost-server installeren.*  
+> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
 
-## Ringkasan
+## Overzicht
 
 This application is meant for people with a collection of recipes they want to share with family and friends or simply
 store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
@@ -45,33 +45,33 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Versi terkirim:** 1.5.19~ynh2
+**Geleverde versie:** 1.5.19~ynh2
 
 **Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
-## Tangkapan Layar
+## Schermafdrukken
 
-![Tangkapan Layar pada Tandoor](./doc/screenshots/example.jpg)
+![Schermafdrukken van Tandoor](./doc/screenshots/example.jpg)
 
-## Dokumentasi dan sumber daya
+## Documentatie en bronnen
 
-- Website aplikasi resmi: <https://tandoor.dev>
-- Dokumentasi pengguna resmi: <https://docs.tandoor.dev>
-- Dokumentasi admin resmi: <https://docs.tandoor.dev>
-- Depot kode aplikasi hulu: <https://github.com/TandoorRecipes/recipes>
-- Gudang YunoHost: <https://apps.yunohost.org/app/tandoor>
-- Laporkan bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
+- Officiele website van de app: <https://tandoor.dev>
+- Officiele gebruikersdocumentatie: <https://docs.tandoor.dev>
+- Officiele beheerdersdocumentatie: <https://docs.tandoor.dev>
+- Upstream app codedepot: <https://github.com/TandoorRecipes/recipes>
+- YunoHost-store: <https://apps.yunohost.org/app/tandoor>
+- Meld een bug: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
-## Info developer
+## Ontwikkelaarsinformatie
 
-Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
+Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
 
-Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
+Om de `testing`-branch uit te proberen, ga als volgt te werk:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
-atau
+of
 sudo yunohost app upgrade tandoor -u https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
 ```
 
-**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>
+**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>
