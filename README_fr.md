@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Tandoor pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/tandoor)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/tandoor)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/tandoor)
 
 [![Installer Tandoor avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
@@ -45,7 +47,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Version incluse :** 1.5.22~ynh1
+**Version incluse :** 1.5.23~ynh1
 
 **Démo :** <https://app.tandoor.dev/accounts/login/?demo>
 
