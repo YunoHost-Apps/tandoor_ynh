@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Tandoor untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/tandoor.svg)](https://ci-apps.yunohost.org/ci/apps/tandoor/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/tandoor.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/tandoor.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/tandoor)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
+![Status kerja](https://apps.yunohost.org/badge/state/tandoor)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/tandoor)
 
 [![Pasang Tandoor dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
@@ -45,7 +47,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Versi terkirim:** 1.5.22~ynh1
+**Versi terkirim:** 1.5.23~ynh1
 
 **Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
