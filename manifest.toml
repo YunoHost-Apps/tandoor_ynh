@@ -6,7 +6,7 @@ id = "tandoor"
 name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
-version = "1.5.25~ynh1"
+version = "1.5.27~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -38,8 +38,8 @@ ram.runtime = "1500M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.25.tar.gz"
-    sha256 = "f892c3b8089c51c14a8aa4f7bc8e09c0b9bcd57dd8a438a3dcb5903325280a01"
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.27.tar.gz"
+    sha256 = "d5ac05b86f3ed890d9f1b4221e1ced8654e67630e4d57d928daaaefdc0e9fddf"
     in_subdir = true
 
     autoupdate.strategy = "latest_github_tag"
