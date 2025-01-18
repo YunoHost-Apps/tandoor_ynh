@@ -47,7 +47,7 @@ a public page.
 - 📥️ **Import your collection** from many other [recipe managers](https://docs.tandoor.dev/features/import_export/)
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
-**Versión actual:** 1.5.27~ynh1
+**Versión actual:** 1.5.29~ynh1
 
 **Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
