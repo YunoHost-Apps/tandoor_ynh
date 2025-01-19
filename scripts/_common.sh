@@ -1,38 +1,25 @@
 #!/bin/bash
 
 #=================================================
-# COMMON VARIABLES
+# COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
 
-nodejs_version=16
+nodejs_version="16"
 
 timezone="$(cat /etc/timezone)"
 
-#=================================================
-# PERSONAL HELPERS
-#=================================================
-
 _tandoor_venv_install() {
-    ynh_exec_as "$app" python3 -m venv --upgrade "$install_dir/venv"
+    ynh_hide_warnings ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
     venvpy="$install_dir/venv/bin/python3"
 
     pushd "$install_dir"
-        ynh_exec_as "$app" "$venvpy" -m pip install -r requirements.txt
+        ynh_hide_warnings ynh_exec_as_app "$venvpy" -m pip install -r requirements.txt
     popd
 }
 
 _tandoor_build_frontend() {
     pushd "$install_dir/vue"
-        ynh_use_nodejs
-        ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" yarn install
-        ynh_exec_warn_less ynh_exec_as "$app" env "$ynh_node_load_PATH" yarn build
+        ynh_hide_warnings ynh_exec_as_app yarn install
+        ynh_hide_warnings ynh_exec_as_app yarn build
     popd
 }
-
-#=================================================
-# EXPERIMENTAL HELPERS
-#=================================================
-
-#=================================================
-# FUTURE OFFICIAL HELPERS
-#=================================================
