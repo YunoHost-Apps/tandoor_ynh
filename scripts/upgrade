@@ -35,9 +35,6 @@ version=$(ynh_app_upstream_version)
 
 ynh_config_add --template="version.py" --destination="$install_dir/recipes/version.py"
 
-chmod 400 "$install_dir/recipes/version.py"
-chown "$app:$app" "$install_dir/recipes/version.py"
-
 #=================================================
 # SPECIFIC SETUP
 #=================================================

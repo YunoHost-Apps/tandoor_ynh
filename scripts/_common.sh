@@ -4,7 +4,7 @@
 # COMMON VARIABLES AND CUSTOM HELPERS
 #=================================================
 
-nodejs_version=16
+nodejs_version="16"
 
 timezone="$(cat /etc/timezone)"
 
@@ -19,7 +19,6 @@ _tandoor_venv_install() {
 
 _tandoor_build_frontend() {
     pushd "$install_dir/vue"
-
         ynh_hide_warnings ynh_exec_as_app yarn install
         ynh_hide_warnings ynh_exec_as_app yarn build
     popd
