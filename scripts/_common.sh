@@ -9,11 +9,11 @@ nodejs_version="16"
 timezone="$(cat /etc/timezone)"
 
 _tandoor_venv_install() {
-    ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
+    ynh_hide_warnings ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
     venvpy="$install_dir/venv/bin/python3"
 
     pushd "$install_dir"
-        ynh_exec_as_app "$venvpy" -m pip install -r requirements.txt
+        ynh_hide_warnings ynh_exec_as_app "$venvpy" -m pip install -r requirements.txt
     popd
 }
 
