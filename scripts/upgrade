@@ -38,15 +38,11 @@ ynh_config_add --template="version.py" --destination="$install_dir/recipes/versi
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression "Building frontend..."
+ynh_script_progression "Installing $app..."
 
 _tandoor_build_frontend
 
-ynh_script_progression "Installing Tandoor and its python dependencies..."
-
 _tandoor_venv_install
-
-ynh_script_progression "Running migrations and generating static files..."
 
 pushd "$install_dir"
     (

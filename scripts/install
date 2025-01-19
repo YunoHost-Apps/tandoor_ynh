@@ -7,6 +7,8 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
+version=$(ynh_app_upstream_version)
+
 secretkey=$(ynh_string_random --length=12)
 ynh_app_setting_set --key=secretkey --value="$secretkey"
 
@@ -40,20 +42,17 @@ ynh_script_progression "Adding $app's configuration..."
 
 ynh_config_add --template="dot_env" --destination="$install_dir/.env"
 
-version=$(ynh_app_upstream_version)
-
 ynh_config_add --template="version.py" --destination="$install_dir/recipes/version.py"
 
 #=================================================
 # SPECIFIC SETUP
 #=================================================
-ynh_script_progression "Building frontend..."
+ynh_script_progression "Installing $app..."
+
 _tandoor_build_frontend
 
-ynh_script_progression "Installing Tandoor and its python dependencies..."
 _tandoor_venv_install
 
-ynh_script_progression "Running migrations and generating static files..."
 pushd "$install_dir"
     (
         source "$install_dir/.env"
