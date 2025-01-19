@@ -4,6 +4,13 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INITIALIZE AND STORE SETTINGS
+#=================================================
+
+timezone="$(cat /etc/timezone)"
+version=$(ynh_app_upstream_version)
+
+#=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
@@ -30,8 +37,6 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env mediafile
 ynh_script_progression "Updating configuration..."
 
 ynh_config_add --template="dot_env" --destination="$install_dir/.env"
-
-version=$(ynh_app_upstream_version)
 
 ynh_config_add --template="version.py" --destination="$install_dir/recipes/version.py"
 
