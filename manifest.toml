@@ -6,6 +6,7 @@ id = "tandoor"
 name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
+
 version = "1.5.32~ynh1"
 
 maintainers = ["Navan Chauhan"]
@@ -26,6 +27,7 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
+
 sso = false
 
 disk = "1000M"
@@ -50,7 +52,7 @@ ram.runtime = "1500M"
 
     [resources.system_user]
     allow_email = true
-    
+
     [resources.install_dir]
     group = "www-data:r-x"
 
