@@ -48,7 +48,7 @@ a public page.
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
 
-**分发版本：** 1.5.32~ynh1
+**分发版本：** 1.5.33~ynh1
 
 **演示：** <https://app.tandoor.dev/accounts/login/?demo>
 
