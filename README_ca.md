@@ -1,22 +1,22 @@
 <!--
-Este archivo README esta generado automaticamente<https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-No se debe editar a mano.
+N.B.: Aquest README ha estat generat automàticament per <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+NO s'ha de modificar manualment.
 -->
 
-# Tandoor para YunoHost
+# Tandoor per YunoHost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/tandoor)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
-![Estado funcional](https://apps.yunohost.org/badge/state/tandoor)
-![Estado En Mantención](https://apps.yunohost.org/badge/maintained/tandoor)
+[![Nivell d'integració](https://apps.yunohost.org/badge/integration/tandoor)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
+![Estat de funcionament](https://apps.yunohost.org/badge/state/tandoor)
+![Estat de manteniment](https://apps.yunohost.org/badge/maintained/tandoor)
 
-[![Instalar Tandoor con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
+[![Instal·la Tandoor amb YunoHosth](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=tandoor)
 
-*[Leer este README en otros idiomas.](./ALL_README.md)*
+*[Llegeix aquest README en altres idiomes.](./ALL_README.md)*
 
-> *Este paquete le permite instalarTandoor rapidamente y simplement en un servidor YunoHost.*  
-> *Si no tiene YunoHost, visita [the guide](https://yunohost.org/install) para aprender como instalarla.*
+> *Aquest paquet et permet instal·lar Tandoor de forma ràpida i senzilla en un servidor YunoHost.*  
+> *Si no tens YunoHost, consulta [la guia](https://yunohost.org/install) per saber com instal·lar-lo.*
 
-## Descripción general
+## Visió general
 
 This application is meant for people with a collection of recipes they want to share with family and friends or simply
 store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as 
@@ -48,28 +48,28 @@ a public page.
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
 
-**Versión actual:** 1.5.34~ynh1
+**Versió inclosa:** 1.5.34~ynh1
 
 **Demo:** <https://app.tandoor.dev/accounts/login/?demo>
 
-## Capturas
+## Captures de pantalla
 
-![Captura de Tandoor](./doc/screenshots/example.jpg)
+![Captures de pantalla de Tandoor](./doc/screenshots/example.jpg)
 
-## Documentaciones y recursos
+## Documentació i recursos
 
-- Sitio web oficial: <https://tandoor.dev>
-- Documentación usuario oficial: <https://docs.tandoor.dev>
-- Documentación administrador oficial: <https://docs.tandoor.dev>
-- Repositorio del código fuente oficial de la aplicación : <https://github.com/TandoorRecipes/recipes>
-- Catálogo YunoHost: <https://apps.yunohost.org/app/tandoor>
+- Lloc web oficial de l'aplicació: <https://tandoor.dev>
+- Documentació oficial per l'usuari: <https://docs.tandoor.dev>
+- Documentació oficial per l'administrador: <https://docs.tandoor.dev>
+- Repositori oficial del codi de l'aplicació: <https://github.com/TandoorRecipes/recipes>
+- Botiga YunoHost: <https://apps.yunohost.org/app/tandoor>
 - Reportar un error: <https://github.com/YunoHost-Apps/tandoor_ynh/issues>
 
-## Información para desarrolladores
+## Informació per a desenvolupadors
 
-Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
+Envieu les pull request a la [branca `testing`](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
 
-Para probar la rama `testing`, sigue asÍ:
+Per provar la branca `testing`, procedir com descrit a continuació:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
@@ -77,4 +77,4 @@ o
 sudo yunohost app upgrade tandoor -u https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
 ```
 
-**Mas informaciones sobre el empaquetado de aplicaciones:** <https://yunohost.org/packaging_apps>
+**Més informació sobre l'empaquetatge d'aplicacions:** <https://yunohost.org/packaging_apps>
