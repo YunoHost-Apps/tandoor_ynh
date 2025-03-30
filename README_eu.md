@@ -48,7 +48,7 @@ a public page.
 - ➕ Many more like recipe scaling, image compression, printing views and supermarkets
 
 
-**Paketatutako bertsioa:** 1.5.33~ynh1
+**Paketatutako bertsioa:** 1.5.34~ynh1
 
 **Demoa:** <https://app.tandoor.dev/accounts/login/?demo>
 
@@ -69,7 +69,7 @@ a public page.
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/tandoor_ynh/tree/testing --debug
