@@ -11,7 +11,7 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
-timezone="$(cat /etc/timezone)"
+timezone="$(timedatectl show --value --property=Timezone)"
 version=$(ynh_app_upstream_version)
 
 #=================================================

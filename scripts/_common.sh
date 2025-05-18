@@ -6,7 +6,7 @@
 
 nodejs_version="16"
 
-timezone="$(cat /etc/timezone)"
+timezone="$(timedatectl show --value --property=Timezone)"
 
 _tandoor_venv_install() {
     ynh_hide_warnings ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
