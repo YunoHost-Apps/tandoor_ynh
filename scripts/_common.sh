@@ -18,7 +18,7 @@ _tandoor_venv_install() {
 }
 
 _tandoor_build_frontend() {
-    pushd "$install_dir/vue"
+    pushd "$install_dir/vue3"
         ynh_hide_warnings ynh_exec_as_app yarn install
         ynh_hide_warnings ynh_exec_as_app yarn build
     popd
