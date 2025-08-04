@@ -64,7 +64,6 @@ pushd "$install_dir"
         ynh_hide_warnings ynh_exec_as_app "$venvpy" manage.py migrate
         ynh_psql_db_shell <<< "ALTER USER $app WITH NOSUPERUSER;"
         ynh_hide_warnings ynh_exec_as_app "$venvpy" manage.py collectstatic --no-input
-        ynh_hide_warnings ynh_exec_as_app "$venvpy" manage.py collectstatic_js_reverse
     )
 popd
 
