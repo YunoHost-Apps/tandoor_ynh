@@ -70,7 +70,7 @@ popd
 #=================================================
 ynh_script_progression "Configuring a data directory..."
 
-setfacl -m  g:$app:rwX,d:g:$app:rwX "$data_dir"
+setfacl -m  g:$app:rwX,d:g:$www-data:rwX "$data_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
