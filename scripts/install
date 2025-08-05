@@ -87,9 +87,9 @@ pushd "$install_dir"
     set -o allexport
     source "$install_dir/.env"
     set +o allexport
-    ynh_hide_warnings ynh_exec_as_app env $(cat $install_dir/.env | xargs) "$install_dir/venv/bin/python" manage.py migrate
+    ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" manage.py migrate
     ynh_psql_db_shell <<< "ALTER USER $app WITH NOSUPERUSER;"
-    ynh_hide_warnings ynh_exec_as_app env $(cat $install_dir/.env | xargs) "$install_dir/venv/bin/python" manage.py collectstatic --no-input
+    ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" manage.py collectstatic --no-input
 popd
 
 #=================================================
