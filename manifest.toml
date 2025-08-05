@@ -94,6 +94,7 @@ ram.runtime = "1500M"
         "build-essential",
         "libxmlsec1-dev",
         "pkg-config",
+        "redis-server",
     ]
 
     [resources.apt.extras.yarn]
