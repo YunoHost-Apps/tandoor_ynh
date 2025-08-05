@@ -5,19 +5,3 @@
 #=================================================
 
 nodejs_version=22
-
-_tandoor_venv_install() {
-    ynh_hide_warnings ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
-    venvpy="$install_dir/venv/bin/python3"
-
-    pushd "$install_dir"
-        ynh_hide_warnings ynh_exec_as_app "$venvpy" -m pip install -r requirements.txt
-    popd
-}
-
-_tandoor_build_frontend() {
-    pushd "$install_dir/vue3"
-        ynh_hide_warnings ynh_exec_as_app yarn install
-        ynh_hide_warnings ynh_exec_as_app yarn build
-    popd
-}
