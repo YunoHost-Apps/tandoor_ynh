@@ -29,8 +29,7 @@ ynh_script_progression "Configuring a data directory..."
 
 ynh_restore "$data_dir/"
 
-setfacl --recursive --modify g:$app:rwX,d:g:www-data:rwX "$data_dir"
-chown -R $app:www-data "$data_dir"
+setfacl --recursive --modify g:$app:rwX,g:www-data:rwX,d:g:www-data:rwX "$data_dir"
 
 #=================================================
 # RESTORE THE PostgreSQL DATABASE
