@@ -28,10 +28,7 @@ ynh_restore "$install_dir"
 ynh_script_progression "Configuring a data directory..."
 
 ynh_restore "$data_dir/"
-
-chmod 750 "$data_dir"
-chmod -R o-rwx "$data_dir/"
-chown -R $app:www-data "$data_dir/"
+setfacl -m  g:$app:rwX,d:g:$app:rwX "$data_dir"
 
 #=================================================
 # RESTORE THE PostgreSQL DATABASE
