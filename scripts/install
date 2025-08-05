@@ -95,6 +95,15 @@ pushd "$install_dir"
     ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/python" manage.py collectstatic --no-input
 popd
 
+#Remove unneeded files
+ynh_safe_rm "$install_dir"/.cache
+ynh_safe_rm "$install_dir"/vue3
+ynh_safe_rm "$install_dir"/.idea
+ynh_safe_rm "$install_dir"/.vscode
+ynh_safe_rm "$install_dir"/.github
+ynh_safe_rm "$install_dir"/.devcontainer
+ynh_safe_rm "$install_dir"/.yarn
+
 #=================================================
 # CONFIGURE DATA DIRECTORY
 #=================================================

@@ -50,6 +50,7 @@ systemctl enable "$app.service" --quiet
 yunohost service add "$app" --description="Smart recipe management" --log="/var/log/$app/$app.log"
 
 ynh_restore "/etc/logrotate.d/$app"
+touch /var/log/$app/$app.log
 chown -R $app:www-data /var/log/$app/
 
 #=================================================
