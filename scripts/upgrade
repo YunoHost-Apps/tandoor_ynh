@@ -67,6 +67,15 @@ pushd "$install_dir"
 popd
 
 #=================================================
+# CONFIGURE DATA DIRECTORY
+#=================================================
+ynh_script_progression "Configuring a data directory..."
+
+chmod 750 "$data_dir"
+chmod -R o-rwx "$data_dir/"
+chown -R $app:www-data "$data_dir/"
+
+#=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."

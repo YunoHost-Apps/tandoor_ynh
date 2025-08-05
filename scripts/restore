@@ -23,6 +23,17 @@ ynh_script_progression "Restoring the app main directory..."
 ynh_restore "$install_dir"
 
 #=================================================
+# CONFIGURE DATA DIRECTORY
+#=================================================
+ynh_script_progression "Configuring a data directory..."
+
+ynh_restore "$data_dir/"
+
+chmod 750 "$data_dir"
+chmod -R o-rwx "$data_dir/"
+chown -R $app:www-data "$data_dir/"
+
+#=================================================
 # RESTORE THE PostgreSQL DATABASE
 #=================================================
 ynh_script_progression "Restoring the PostgreSQL database..."

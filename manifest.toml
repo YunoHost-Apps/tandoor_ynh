@@ -57,7 +57,6 @@ ram.runtime = "1500M"
     group = "www-data:r-x"
 
     [resources.data_dir]
-    group = "www-data:r-x"
     subdirs = ["media"]
 
     [resources.permissions]
