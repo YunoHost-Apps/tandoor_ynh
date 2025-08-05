@@ -64,13 +64,11 @@ ram.runtime = "1500M"
 
     api.url = "/api"
     api.allowed = "visitors"
-    api.auth_header = false
     api.show_tile = false
     api.protected = true
 
     media.url = "/media"
     media.allowed = "visitors"
-    media.auth_header = false
     media.show_tile = false
     media.protected = true
 
