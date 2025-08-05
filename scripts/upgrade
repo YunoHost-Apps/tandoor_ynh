@@ -71,7 +71,7 @@ popd
 #=================================================
 ynh_script_progression "Configuring a data directory..."
 
-setfacl -m  g:$app:rwX,d:g:www-data:rwX "$data_dir"
+setfacl --recursive --modify g:$app:rwX,d:g:www-data:rwX "$data_dir"
 chown -R $app:www-data "$data_dir"
 
 #=================================================
