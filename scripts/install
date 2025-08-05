@@ -16,6 +16,9 @@ timezone="$(timedatectl show --value --property=Timezone)"
 secretkey=$(ynh_string_random --length=12)
 ynh_app_setting_set --key=secretkey --value="$secretkey"
 
+redis_db=$(ynh_redis_get_free_db)
+ynh_app_setting_set --key=redis_db --value=$redis_db
+
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
@@ -116,7 +119,7 @@ ynh_config_add_logrotate
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --log="/var/log/$app/$app.log"
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
