@@ -26,9 +26,9 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
-ldap = false
+ldap = true
 
-sso = false
+sso = true
 
 disk = "1000M"
 ram.build = "2000M"
@@ -56,13 +56,23 @@ ram.runtime = "1500M"
     [resources.install_dir]
     group = "www-data:r-x"
 
+    [resources.data_dir]
+    subdirs = ["media"]
+
     [resources.permissions]
     main.url = "/"
+
     api.url = "/api"
     api.allowed = "visitors"
     api.auth_header = false
     api.show_tile = false
     api.protected = true
+
+    media.url = "/media"
+    media.allowed = "visitors"
+    media.auth_header = false
+    media.show_tile = false
+    media.protected = true
 
     [resources.ports]
     main.default = 8095

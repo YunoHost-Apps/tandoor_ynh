@@ -57,6 +57,8 @@ SHOPPING_MIN_AUTOSYNC_INTERVAL=5
 # This can either be a relative path from the applications base path or the url of an external host
 #MEDIA_URL=/media/
 
+MEDIA_ROOT=__DATA_DIR__/media
+
 # Serve mediafiles directly using gunicorn. Basically everyone recommends not doing this. Please use any of the examples
 # provided that include an additional nxginx container to handle media file serving.
 # If you know what you are doing turn this back on (1) to serve media files using djangos serve() method.
