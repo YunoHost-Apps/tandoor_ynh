@@ -23,7 +23,7 @@ ynh_systemctl --service="$app" --action="stop" --log_path="systemd"
 
 if ynh_app_upgrading_from_version_before 2.0.1~ynh1
 then
-    if [ -d "$install_dir"/mediafiles ]; then
+    if [ -d "$install_dir"/mediafiles/* ]; then
     mv $install_dir/mediafiles $data_dir/media
     fi
 fi
