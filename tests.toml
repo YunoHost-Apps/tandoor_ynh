@@ -17,3 +17,4 @@ test_format = 1.0
     # -------------------------------
 
     test_upgrade_from.295b9edb6d9c6f0a39cd8b9a8ad8dc38904199bd.name = "Latest packagingv1 version"
+    test_upgrade_from.118c69fbdca7dae9aac45dbfd6d14d98a7623e61.name = "1.5.34"

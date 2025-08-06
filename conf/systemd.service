@@ -11,6 +11,8 @@ EnvironmentFile=__INSTALL_DIR__/.env
 ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --bind 127.0.0.1:__PORT__ recipes.wsgi:application
 Restart=on-failure
 RestartSec=10
+StandardOutput=append:/var/log/__APP__/__APP__.log
+StandardError=append:/var/log/__APP__/__APP__.log
 
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html

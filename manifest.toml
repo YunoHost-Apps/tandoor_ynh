@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
 
-version = "1.5.34~ynh1"
+version = "2.0.1~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -26,9 +26,9 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
-ldap = false
+ldap = true
 
-sso = false
+sso = true
 
 disk = "1000M"
 ram.build = "2000M"
@@ -40,11 +40,12 @@ ram.runtime = "1500M"
 
     [install.init_main_permission]
     type = "group"
+    default = "visitors"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/1.5.34.tar.gz"
-    sha256 = "fcd9a00d09874350d87936633eba53410c41fc7b617058a2f00f096c3948768d"
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/2.0.1.tar.gz"
+    sha256 = "7a5776ed92a5537e371ef2dc1b9f90718ec7abb383335d88e164d5da77abf3a5"
     in_subdir = true
 
     autoupdate.strategy = "latest_github_tag"
@@ -56,13 +57,21 @@ ram.runtime = "1500M"
     [resources.install_dir]
     group = "www-data:r-x"
 
+    [resources.data_dir]
+    subdirs = ["media"]
+
     [resources.permissions]
     main.url = "/"
+
     api.url = "/api"
     api.allowed = "visitors"
-    api.auth_header = false
     api.show_tile = false
     api.protected = true
+
+    media.url = "/media"
+    media.allowed = "visitors"
+    media.show_tile = false
+    media.protected = true
 
     [resources.ports]
     main.default = 8095
@@ -85,6 +94,7 @@ ram.runtime = "1500M"
         "build-essential",
         "libxmlsec1-dev",
         "pkg-config",
+        "redis-server",
     ]
 
     [resources.apt.extras.yarn]
