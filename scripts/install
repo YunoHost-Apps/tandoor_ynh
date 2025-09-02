@@ -4,7 +4,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
+
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -22,9 +22,9 @@ ynh_app_setting_set --key=redis_db --value=$redis_db
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression "Installing NodeJS..."
+#REMOVEME? ynh_script_progression "Installing NodeJS..."
 
-ynh_nodejs_install
+#REMOVEME? ynh_nodejs_install
 
 #=================================================
 # CREATE A PostgreSQL DATABASE
