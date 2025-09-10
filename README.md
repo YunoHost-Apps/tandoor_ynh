@@ -21,7 +21,7 @@ Manage and share recipes, plan meals, build shopping lists
 
 
 ## Screenshots
-![Screenshot of Tandoor](./doc/screenshots/example.jpg)
+![Screenshot of Tandoor](./doc/screenshots/tandoor.jpg)
 
 ## 📦 Developer info
 
