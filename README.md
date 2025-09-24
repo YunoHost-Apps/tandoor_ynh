@@ -12,7 +12,7 @@ Manage and share recipes, plan meals, build shopping lists
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://tandoor.dev)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://app.tandoor.dev/accounts/login/?demo)
-[![Version: 2.2.0~ynh1](https://img.shields.io/badge/Version-2.2.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
+[![Version: 2.2.4~ynh1](https://img.shields.io/badge/Version-2.2.4~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/tandoor/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/tandoor"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
