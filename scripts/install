@@ -18,7 +18,6 @@ ynh_app_setting_set --key=secretkey --value="$secretkey"
 redis_db=$(ynh_redis_get_free_db)
 ynh_app_setting_set --key=redis_db --value=$redis_db
 
-
 #=================================================
 # CREATE A PostgreSQL DATABASE
 #=================================================
