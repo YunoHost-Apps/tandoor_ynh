@@ -18,7 +18,6 @@ ynh_app_setting_set --key=secretkey --value="$secretkey"
 redis_db=$(ynh_redis_get_free_db)
 ynh_app_setting_set --key=redis_db --value=$redis_db
 
-
 #=================================================
 # CREATE A PostgreSQL DATABASE
 #=================================================
@@ -73,6 +72,8 @@ popd
 pushd "$install_dir"/vue3
     ynh_script_progression "Building frontend..."
     export NODE_ENV=production
+    corepack enable
+    ynh_hide_warnings corepack prepare  yarn@latest --activate
     ynh_hide_warnings ynh_exec_as_app yarn install
     ynh_hide_warnings ynh_exec_as_app yarn build
     ynh_hide_warnings ynh_exec_as_app yarn autoclean --init
