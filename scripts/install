@@ -72,6 +72,8 @@ popd
 pushd "$install_dir"/vue3
     ynh_script_progression "Building frontend..."
     export NODE_ENV=production
+    corepack enable
+    ynh_hide_warnings corepack prepare  yarn@latest --activate
     ynh_hide_warnings ynh_exec_as_app yarn install
     ynh_hide_warnings ynh_exec_as_app yarn build
     ynh_hide_warnings ynh_exec_as_app yarn autoclean --init
