@@ -21,7 +21,7 @@ code = "https://github.com/TandoorRecipes/recipes"
 cpe = "cpe:2.3:a:tandoor:recipes"
 
 [integration]
-yunohost = ">= 12.1.17"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -95,11 +95,6 @@ ram.runtime = "1500M"
         "pkg-config",
         "redis-server",
     ]
-
-    [resources.apt.extras.yarn]
-    repo = "deb https://dl.yarnpkg.com/debian/ stable main"
-    key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
-    packages = ["yarn"]
 
     [resources.database]
     type = "postgresql"
