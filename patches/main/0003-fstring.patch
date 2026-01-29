@@ -1,0 +1,22 @@
+From 989a6de014143c7342598292335f74f76cd46bd8 Mon Sep 17 00:00:00 2001
+From: orhtej2 <2871798+orhtej2@users.noreply.github.com>
+Date: Thu, 29 Jan 2026 16:27:46 +0100
+Subject: [PATCH] Update mealie1.py
+
+---
+ cookbook/integration/mealie1.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cookbook/integration/mealie1.py b/cookbook/integration/mealie1.py
+index 01cbfdd444..3e7b51ad68 100644
+--- a/cookbook/integration/mealie1.py
++++ b/cookbook/integration/mealie1.py
+@@ -355,7 +355,7 @@ def get_recipe_from_file(self, file):
+         for r in mealie_database['recipes']:
+             try:
+                 if recipe := Recipe.objects.filter(pk=recipes_dict[r['id']]).first():
+-                    self.import_recipe_image(recipe, BytesIO(file.read(f'data/recipes/{str(uuid.UUID(str(r['id'])))}/images/original.webp')), filetype='.webp')
++                    self.import_recipe_image(recipe, BytesIO(file.read(f'data/recipes/{str(uuid.UUID(str(r["id"])))}/images/original.webp')), filetype='.webp')
+             except Exception:
+                 pass
+ 
