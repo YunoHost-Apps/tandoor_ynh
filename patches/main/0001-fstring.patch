@@ -1,0 +1,22 @@
+From 8bce414f4fba544b16e48be3a71d610678324d80 Mon Sep 17 00:00:00 2001
+From: orhtej2 <2871798+orhtej2@users.noreply.github.com>
+Date: Thu, 29 Jan 2026 15:37:05 +0100
+Subject: [PATCH] Fixup fstring
+
+---
+ cookbook/serializer.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cookbook/serializer.py b/cookbook/serializer.py
+index 3a0cca709c..10f62bfd00 100644
+--- a/cookbook/serializer.py
++++ b/cookbook/serializer.py
+@@ -445,7 +445,7 @@ def get_file_size_mb(self, obj):
+     def create(self, validated_data):
+         if Space.objects.filter(created_by=self.context['request'].user).count() >= self.context['request'].user.userpreference.max_owned_spaces:
+             raise serializers.ValidationError(
+-                _('You have the reached the maximum amount of spaces that can be owned by you.') + f' ({self.context['request'].user.userpreference.max_owned_spaces})')
++                _('You have the reached the maximum amount of spaces that can be owned by you.') + f" ({self.context['request'].user.userpreference.max_owned_spaces})")
+ 
+         name = None
+         if 'name' in validated_data:
