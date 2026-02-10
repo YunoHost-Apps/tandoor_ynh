@@ -7,7 +7,7 @@ index 25862ca..63baa9e 100755
                      metadata[current_key] = value.lstrip()
                  elif re.match(r'^\s*-\s', line) and current_key is not None:
 -                    metadata[current_key] = metadata[current_key] + f"{re.split(r'^\s*-\s', line)[-1]}, "
-+                    metadata[current_key] = metadata[current_key] + f"{re.split(r'^\\s*-\\s', line)[-1]}, "
++                    metadata[current_key] = metadata[current_key] + re.split(r'^\s*-\s', line)[-1] + ", "
 
          # Parse the Steps recursively Step -> Ingredient -> Quantity
          raw_steps = re.split(r'\n\n', raw_no_metadata.lstrip())
