@@ -33,6 +33,7 @@ ynh_psql_db_shell <<< "ALTER USER $db_name WITH SUPERUSER;"
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/.uv" --source_id="uv"
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -62,7 +63,7 @@ fi
 
 pushd "$install_dir"
     ynh_script_progression "Building backend..."
-    ynh_exec_as_app python3 -m venv --upgrade "$install_dir/venv"
+    ynh_exec_as_app env UV_PYTHON_INSTALL_DIR="$install_dir/.python_runtime" "$install_dir/.uv/uv" venv --python 3.13 --seed --clear "$install_dir/venv"
     ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install --upgrade pip
     ynh_hide_warnings ynh_exec_as_app "$install_dir/venv/bin/pip" install -r requirements.txt --no-cache-dir
 
