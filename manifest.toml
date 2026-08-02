@@ -23,7 +23,7 @@ cpe = "cpe:2.3:a:tandoor:recipes"
 [integration]
 yunohost = ">= 12.1.38"
 helpers_version = "2.1"
-architectures = "all"
+architectures = [ "armhf", "arm64", "amd64" ]
 multi_instance = true
 
 ldap = true
