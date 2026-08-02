@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
 
-version = "2.5.3~ynh1"
+version = "2.6.13~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -23,7 +23,7 @@ cpe = "cpe:2.3:a:tandoor:recipes"
 [integration]
 yunohost = ">= 12.1.38"
 helpers_version = "2.1"
-architectures = "all"
+architectures = [ "armhf", "arm64", "amd64" ]
 multi_instance = true
 
 ldap = true
@@ -43,12 +43,27 @@ ram.runtime = "1500M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/2.5.3.tar.gz"
-    sha256 = "403e729043d3287b7dd044f2dd5f65b9dcd34f2ac169f8fda67e50a6596cc7a3"
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/2.6.13.tar.gz"
+    sha256 = "b2c8166568dd37228793176459c91c9a9ac0f7b88c927bc127a2728a80281c2d"
     in_subdir = true
 
     autoupdate.strategy = "latest_github_tag"
-    autoupdate.asset = "tarball"
+
+    [resources.sources.uv]
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.11.30/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "04bc7d180d6138bf6dc08387acf507a823f397a98fea55da36b0ccc7fbce3b68"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.11.30/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "8c11d90f5f66d232930cf8ae3a085c39877690d409e10878234802b028b20e2a"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.11.30/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "8e2d2ab63a37af47c1b4126c5871ee191b983a10670af91d8ef0bee198292931"
+
+    in_subdir = true
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.upstream = "https://github.com/astral-sh/uv"
+    autoupdate.asset.amd64 = "^uv-x86_64-unknown-linux-gnu.tar.gz$"
+    autoupdate.asset.arm64 = "^uv-aarch64-unknown-linux-gnu.tar.gz$"
+    autoupdate.asset.armhf = "^uv-armv7-unknown-linux-gnueabihf.tar.gz$"
 
     [resources.system_user]
     allow_email = true
@@ -79,9 +94,6 @@ ram.runtime = "1500M"
     packages = [
         "git",
         "curl",
-        "python3",
-        "python3-pip",
-        "python3-venv",
         "libpq-dev",
         "postgresql",
         "libsasl2-dev",
