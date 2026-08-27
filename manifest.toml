@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
 
-version = "2.6.13~ynh7"
+version = "2.6.13~ynh8"
 
 maintainers = ["Navan Chauhan"]
 
@@ -50,12 +50,12 @@ ram.runtime = "1500M"
     autoupdate.strategy = "latest_github_tag"
 
     [resources.sources.uv]
-    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.12.6/uv-x86_64-unknown-linux-gnu.tar.gz"
-    amd64.sha256 = "8681d8921e7d520fb368991dcf5f9c1905b80f5bf2a265a0ed085c8d8e342477"
-    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.12.6/uv-aarch64-unknown-linux-gnu.tar.gz"
-    arm64.sha256 = "d58030acd26159499ac82f32da12d1b3c12a3a1bfc414232d9082070c03e128d"
-    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.12.6/uv-armv7-unknown-linux-gnueabihf.tar.gz"
-    armhf.sha256 = "2bde552a6288852ce4858e740d9434b64cd9edbba1956f6170c43ad93867a5ac"
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.12.7/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "788f18abea7c5f55d6216e4f5613fd89d4d59b631efeec117b2b07fe72f1da21"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.12.7/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "66393193038dd7eb108abd7a218d9cec04ac70ab98242b0720fa94de19223b7c"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.12.7/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "e5b9a25ff397f593e9fff236c4d72ada28aff7da4540868dbca74f391a86d546"
 
     in_subdir = true
 
