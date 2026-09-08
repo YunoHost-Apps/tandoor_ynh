@@ -21,7 +21,7 @@ code = "https://github.com/TandoorRecipes/recipes"
 cpe = "cpe:2.3:a:tandoor:recipes"
 
 [integration]
-yunohost = ">= 12.1.38"
+yunohost = ">= 12.1.40"
 helpers_version = "2.1"
 architectures = [ "armhf", "arm64", "amd64" ]
 multi_instance = true
@@ -112,4 +112,4 @@ ram.runtime = "1500M"
     type = "postgresql"
 
     [resources.nodejs]
-    version = "22"
+    version = "24"
