@@ -7,7 +7,7 @@ name = "Tandoor"
 description.en = "Manage and share recipes, plan meals, build shopping lists"
 description.fr = "Gérez et partagez des recettes, planifiez des repas, créez des listes de courses"
 
-version = "2.7.6~ynh1"
+version = "2.7.8~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -43,19 +43,19 @@ ram.runtime = "1500M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/2.7.6.tar.gz"
-    sha256 = "ef2ef5ec79284734aece0bb2a3e0907d17b7987dce7c8967da19fd61a57dc5ce"
+    url = "https://github.com/TandoorRecipes/recipes/archive/refs/tags/2.7.8.tar.gz"
+    sha256 = "78361828b8df79e85451c97a55a95ffdfc45d3b8750558f83528f21e034aa5f7"
     in_subdir = true
 
     autoupdate.strategy = "latest_github_tag"
 
     [resources.sources.uv]
-    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-x86_64-unknown-linux-gnu.tar.gz"
-    amd64.sha256 = "a7fbaff2b9a271d85c1bdb540941090fd1ce011797b4abeb48e4dcd39c2471d5"
-    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-aarch64-unknown-linux-gnu.tar.gz"
-    arm64.sha256 = "0797542018e541a9288855df555c8077eed06f7a47d206362030480e8ecc9f3d"
-    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.13.9/uv-armv7-unknown-linux-gnueabihf.tar.gz"
-    armhf.sha256 = "8bd2ce216e6d3fe825ec0fde4532dea708964e8c419844d2ed8e9e7901a7a11e"
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.13.10/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "bf65ac1a0af10f92c522d91ac096c7c0a39657647b155577e7836c2cbbb4526c"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.13.10/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "14590f644805a6234ffe071154340669e38137f38e60aa9629690119704107d2"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.13.10/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "ab7a68a76962f7403fe66418c4a005e0b17d822518f7fea9d3c1bd036e8f530f"
 
     in_subdir = true
 
